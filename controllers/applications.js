@@ -78,6 +78,8 @@ router.delete('/:applicationId', async (req, res) => {
       res.redirect('/');
     }
   });
+
+  
   router.get('/:applicationId/edit', async (req, res) => {
     try {
       const currentUser = await User.findById(req.session.user._id);
